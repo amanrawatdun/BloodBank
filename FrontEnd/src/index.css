@@ -1,0 +1,75 @@
+/* ===============================
+   RESET STYLES
+================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* overflow: hidden; */ /* Optional, uncomment only if needed */
+}
+
+/* ===============================
+   FORM STYLES
+================================= */
+.form-banner img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* Prevent distortion */
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ===============================
+   LOADER STYLES
+================================= */
+.loader-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ffffff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ===============================
+   NAVBAR STYLES
+================================= */
+.navbar,
+.nav-link,
+.navbar-brand {
+  background-color: #000;
+  color: #fff;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #ff3d00; /* Optional hover color */
+  text-decoration: none;
+}
+
+.sidebar{
+  height:113vh;
+}

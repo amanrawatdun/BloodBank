@@ -1,0 +1,106 @@
+/* Analytics.css */
+
+/* --- General Page Content Wrapper (to ensure spacing from sidebar/header if not handled by Layout) --- */
+.analytics-page-content {
+    padding: 20px; /* Overall padding for the content area */
+    /* If you have a fixed sidebar and header, you might need margin-left and margin-top here */
+    /* For example, if your sidebar is 250px wide and header is 60px tall: */
+    /* margin-left: 250px; */
+    /* margin-top: 60px; */
+}
+
+/* --- Blood Group Cards Section --- */
+.blood-group-cards-section {
+    padding: 20px 0; /* Add some vertical padding around the card row */
+}
+
+.blood-group-card {
+    width: 18rem; /* Bootstrap's default width */
+    border: none; /* Remove default card border */
+    border-radius: 10px; /* Softer rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+    color: white; /* Default text color for cards */
+    overflow: hidden; /* Ensures content respects border-radius */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth hover effect */
+}
+
+.blood-group-card:hover {
+    transform: translateY(-5px); /* Lift card slightly on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+.card-title-blood-group {
+    font-size: 2.5rem; /* Larger font for blood group */
+    font-weight: 700; /* Bolder font */
+    padding: 10px;
+    border-radius: 5px; /* Rounded corners for the title background */
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for contrast */
+    color: #333; /* Darker text for readability on light background */
+    margin-bottom: 15px; /* Spacing below title */
+}
+
+.card-body {
+    padding: 20px; /* More padding inside the card body */
+}
+
+.card-text-detail {
+    font-size: 1.1rem; /* Slightly larger text for details */
+    margin-bottom: 8px; /* Spacing between lines */
+    line-height: 1.5;
+}
+
+.card-text-detail b {
+    font-weight: 700; /* Ensure bold is strong */
+}
+
+.card-footer-blood-group {
+    padding: 15px;
+    font-size: 1.3rem; /* Larger font for total available */
+    font-weight: 600; /* Bolder font */
+    background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent dark footer */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle separator */
+    border-bottom-left-radius: 10px; /* Match card border-radius */
+    border-bottom-right-radius: 10px;
+}
+
+/* --- Recent Transactions Table Section --- */
+.recent-transactions-section {
+    padding: 20px; /* Add padding around the table section */
+}
+
+.section-title {
+    font-size: 2rem; /* Larger title for the table section */
+    font-weight: 600;
+    margin-bottom: 25px; /* Spacing below title */
+    color: #333; /* Darker color for section title */
+}
+
+/* Enhancements for Bootstrap Table */
+.table {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for the table */
+    border-radius: 8px; /* Rounded corners for the whole table */
+    overflow: hidden; /* Ensures border-radius applies to table content */
+}
+
+.table thead th {
+    background-color: #f0f0f0; /* Light background for table headers */
+    color: #555;
+    font-weight: 600;
+    padding: 12px 15px;
+    border-bottom: 2px solid #ddd;
+}
+
+.table tbody td {
+    padding: 10px 15px;
+    vertical-align: middle; /* Align content vertically in cells */
+}
+
+/* Customizing Bootstrap's .table-striped if desired */
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9; /* Lighter stripe color */
+}
+
+/* Customizing Bootstrap's .table-hover if desired */
+.table-hover tbody tr:hover {
+    background-color: #e9e9e9; /* Slightly darker hover color */
+}

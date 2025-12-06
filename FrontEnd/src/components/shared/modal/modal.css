@@ -1,0 +1,99 @@
+/* --- Overall Modal Content --- */
+.custom-modal-content {
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    border: none;
+}
+
+/* --- Modal Header --- */
+.custom-modal-header {
+    background-color: #2e3200;
+    color: white;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 20px 25px;
+    border-bottom: none;
+}
+
+.custom-modal-header .modal-title {
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+
+.custom-btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.custom-btn-close:hover {
+    opacity: 1;
+}
+
+/* --- Modal Body --- */
+.custom-modal-body {
+    padding: 25px;
+    color: #333;
+}
+
+/* --- Form Elements --- */
+.form-check .form-check-input {
+    border-color: #2e3200;
+}
+
+.form-check .form-check-input:checked {
+    background-color: #2e3200;
+    border-color: #2e3200;
+}
+
+.form-check .form-check-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.custom-select,
+.custom-input-field {
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.custom-select:focus,
+.custom-input-field:focus {
+    border-color: #2e3200;
+    box-shadow: 0 0 0 0.25rem rgba(46, 50, 0, 0.25);
+    outline: none;
+}
+
+/* --- Modal Footer --- */
+.custom-modal-footer {
+    border-top: none;
+    padding: 20px 25px;
+    background-color: #f8f8f8;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* --- Custom Submit Button --- */
+.custom-submit-btn {
+    background-color: #2e3200;
+    border-color: #2e3200;
+    font-weight: 600;
+    padding: 10px 25px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+
+.custom-submit-btn:hover {
+    background-color: #4a5000;
+    border-color: #4a5000;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    border-radius: 8px;
+    padding: 10px 25px;
+}

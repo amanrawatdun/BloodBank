@@ -1,0 +1,108 @@
+.sidebar {
+  /* height: 100vh !important; */
+  /* border-radius: 5px; */
+  height: 113vh;
+  background-color: #2e3200;
+  box-shadow: 0 0 2px gray;
+  color: white;
+}
+
+.menu {
+  padding-top: 100px;
+}
+
+.menu-item {
+  padding-top: 30px;
+}
+
+.menu-item a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.menu-item i {
+  font-size: 1.2rem;
+  margin: 0 15px;
+  color: white;
+}
+
+.active {
+  background-color: white;
+  padding: 10px;
+  margin-top: 25px;
+}
+
+.active a,
+.active i {
+  color: #2e3200;
+}
+/* Your existing CSS (e.g., in App.css or a dedicated CSS file) */
+
+/* --- General setup for Fixed Positioning --- */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* --- Header Styles (Must be fixed if sidebar starts below it) --- */
+.header {
+    height: 60px; /* Example fixed header height */
+    background-color: #f0f0f0;
+    position: fixed; /* Make the header fixed */
+    top: 0;
+    width: 100%;
+    z-index: 1001; /* Ensure header is above sidebar */
+}
+
+/* --- Layout Row (Adjust margin-top to account for fixed header) --- */
+.row.g-0 {
+    /* Push the entire row down below the fixed header */
+    margin-top: 60px; /* Must match your fixed header's height */
+    /* Remove min-height here if you just want content to naturally push the page down */
+}
+
+/* --- Sidebar Styles for Fixed Positioning --- */
+.sidebar {
+    /* height: 100vh !important; */
+    /* border-radius: 5px; */
+    background-color: #2e3200;
+    box-shadow: 0 0 2px gray;
+    color: white;
+
+    /* --- Key properties for fixed positioning --- */
+    position: fixed; /* Makes the element fixed relative to the viewport */
+    top: 60px; /* Starts 60px from the top (below your fixed header) */
+    left: 0; /* Sticks to the left edge */
+    width: 250px; /* IMPORTANT: Fixed elements need an explicit width */
+    height: calc(100vh - 60px); /* Adjust height to fill space below fixed header */
+    z-index: 999; /* Ensure it's above main content but below header */
+}
+
+/* --- Main Content Column --- */
+.col-md-9 {
+    /* This is CRUCIAL: Push the content away from the fixed sidebar */
+    margin-left: 250px; /* Must match the width of your fixed sidebar */
+    padding: 20px; /* Add internal padding for content */
+    /* Remove Bootstrap's default column padding if it interferes with your margin-left */
+    /* padding-left: 0; padding-right: 0; */
+}
+
+/* --- Adjust your col-md-3 if it contains only the fixed sidebar --- */
+/* If you keep the <div className="col-md-3"> in your JSX, it effectively becomes an empty space holder
+   because the fixed sidebar is taken out of the document flow. You might consider removing it
+   from your JSX if it serves no purpose. */
+/* .col-md-3 {
+    width: 250px;
+    flex-shrink: 0;
+} */
+
+
+/* --- Your existing menu styles --- */
+.menu {
+    padding-top: 100px; /* This padding will be applied within the fixed sidebar */
+}
+/* ... rest of your .menu-item, .active styles */
